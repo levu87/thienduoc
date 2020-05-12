@@ -1,0 +1,176 @@
+.home-about 
+    scroll-behavior: smooth
+    &__content 
+        position: relative
+        .main-btn 
+            color: $main-color!important
+            em 
+                color: $main-color
+            &:hover,&.active 
+                color: #ffffff!important
+                em 
+                    color: #ffffff
+        .layer-1 
+            position: absolute 
+            top: 0 
+            left: 0 
+            right: 0 
+            bottom: 0 
+            min-height: 100%
+            z-index: -1
+            display: flex 
+            flex-wrap: wrap
+            &__empty 
+                width: 50%
+                flex: 0 0 50%
+            &__wf-image 
+                flex: 0 0 50%
+                width: 50%
+                position: relative
+                img 
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .section-divider 
+                    position: absolute 
+                    height: 100%
+                    width: auto 
+                    left: -1px
+                    top: 0
+        .layer-2 
+            display: flex 
+            flex-wrap: wrap 
+            @include mr
+            &__empty 
+                width: 50%
+                flex: 0 0 50%
+                @include pd
+            &__content
+                flex: 0 0 50%
+                width: 50%
+                padding-top: 7rem 
+                padding-bottom: 12rem
+                @include pd
+
+        &:nth-child(1)
+            margin-top: 1rem
+            .layer-2
+                &__content 
+                    padding-right: 8.33%
+        &:nth-child(2)
+            margin-top: 1rem
+            .layer-1 
+                &__wf-image-1, &__wf-image-2
+                    flex: 0 0 50%
+                    max-width: 50%
+                    height: 100%
+                    background-position: unset!important
+                &__wf-image-1
+                    position: relative
+                    .section-divider 
+                        position: absolute 
+                        height: 100%
+                        width: auto 
+                        right: -1px
+                        top: 0
+                        transform: rotate(180deg)
+            .layer-2
+                &__content:nth-child(1)
+                    padding-right: 8.33%
+                    h3 
+                        color: #ffffff
+                    h2  
+                        color: #ffffff
+                    .play-btn 
+                        display: flex
+                        align-items: center 
+                        img 
+                            max-width: 7.5rem
+                            height: auto
+                        span 
+                            font-size: 1.4rem
+                            text-transform: uppercase
+                            font-weight: bold
+                            color: #ffffff
+                            margin-left: 1.5rem
+                &__content:nth-child(2)
+                    padding-right: 8.33%
+                    padding-left: 8.33%
+    @media (max-width: 991.98px)
+        &__content 
+            &:nth-child(1)
+                display: flex 
+                flex-direction: column-reverse
+                .layer-1 
+                    position: unset
+                    flex-direction: column
+                    .section-divider 
+                        display: none
+                    &__wf-image,&__empty 
+                        flex: 0 0 100%
+                        width: 100%
+                        height: 100%
+                .layer-2
+                    flex-direction: column
+                    &__content,&__empty 
+                        flex: 0 0 100%
+                        width: 100%
+                    &__content 
+                        padding: 6rem 1.5rem
+            &:nth-child(2)
+                .layer-1 
+                    display: none
+                    .section-divider 
+                        display: none
+                .layer-2 
+                    flex-direction: column
+                    &__content 
+                        width: 100%
+                        flex:  0 0 100%
+                        &:nth-child(1)
+                            background: url('/Data/Sites/1/media/img/home-bg.png')
+                            background-repeat: no-repeat 
+                            background-size: cover
+                            margin-top: 6rem
+                        &:nth-child(2)
+                            // margin-top: 6rem
+                            // background: url('../img/home-bg-3.png')
+                            // background-repeat: no-repeat 
+                            // background-size: cover
+                            padding: 6rem 1.5rem 0
+
+    h3 
+        font-size: 1.6rem
+        color: rgb(102, 102, 102)
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 1.2
+        margin-bottom: 2rem
+    h2
+        font-size: 3rem
+        color: $main-color
+        line-height: 1.2
+        font-weight: 400
+        margin-bottom: 2rem
+        @media (max-width: 767.98px)
+            font-size: 2.4rem
+    p 
+        font-size: 1.6rem
+        color: rgb(51, 51, 51)
+        line-height: 1.375
+        margin-bottom: 2rem
+    .button-view 
+        padding: 1rem 3rem 
+        border: 1px solid $main-color
+        font-size: 1.4rem
+        color: $main-color
+        font-weight: bold
+        text-transform: uppercase
+        display: inline-block
+        border-radius: 2rem
+        em 
+            margin-left: 1.5rem
+        &:hover 
+            background: $main-color 
+            color: #ffffff
+            transition: .2s all ease-in-out

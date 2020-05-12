@@ -1,0 +1,42 @@
+section.advisory 
+    .container 
+        .row 
+            .col-lg-4 
+                .advisory__form
+                    .form-inner(setBackground="./img/pro-bg-2.png")
+                        .title Câu hỏi
+                        .wrap-form
+                            .form-group
+                                input(type="text", placeholder="Họ tên")
+                            .form-group
+                                input(type="text", placeholder="Email")
+                            .form-group
+                                input(type="text", placeholder="Số điện thoại")
+                            .form-group
+                                input(type="text", placeholder="Tiêu đề")
+                            .form-group
+                                textarea(name="", cols="30", rows="10", placeholder="Nội dung")
+                            .form-group.frm-btnwrap
+                                .frm-btn
+                                    input(type="submit", value="Gửi")
+            .col-lg-8 
+                .advisory__accordion
+                    .heading 
+                        h1.main-title Về bệnh trĩ
+                        .sort
+                            label(for='#sort') Câu hỏi
+                            .select
+                                select#sort(name='speed')
+                                    option option 1
+                                    option option 2
+                                    option option 3
+                    ul.accordions
+                        -for(i=0; i<10; i++)
+                            li.accordion-item
+                                .accordion-title
+                                    span.number #{i+1}. 
+                                    | Sử dụng thuốc CRILA có ảnh hưởng gì tới tim mạch – huyết áp – khả năng hoạt động tình dục không?
+                                    .icon
+                                .accordion-content
+                                    p Viên nang Crila không ảnh hưởng đến hoạt động tim mạch và huyết áp. Chúng tôi đã thực hiện các nghiên cứu ở nước ngoài và ở bộ môn dược lý, sau khi tiến hành các thử nghiệm và đi đến kết luận: viên nang Crila không ảnh hưởng đến hoạt động tim mạch và huyết áp, an toàn cho người sử dụng. Còn đối với hoạt động tình dục ở nam giới, qua kết quả thử nghiệm trên nhiều bệnh nhân và trong suốt thời gian một năm không có một trường hợp nào thấy có ảnh hưởng đến hoạt động tình dục. Để có căn cứ khoa học chúng tôi đã tiến hành nghiên cứu  đề tài này và tập thể khoa học tham gia đề tài đã kết luận rằng viên nang Crila không gây ảnh hưởng xấu đến đời sống hoạt động tình dục của bệnh nhân.
+                                    

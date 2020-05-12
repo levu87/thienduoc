@@ -1,0 +1,208 @@
+.video 
+    padding: 6rem 0
+    &__gallery 
+        .left,.right
+            .item 
+                flex: 0 0 100%
+                .item-inner
+                    display: block
+            .col-6
+                padding: 0
+            .title
+                color: #ffffff
+                opacity: 1
+                font-weight: 400
+                text-transform: capitalize
+                display: block
+                width: 100%
+                text-align: center
+                color: #ffffff
+                font-size: 1.8rem
+                padding-top: 2rem
+                font-weight: 700
+                transform: scale(0)
+            .image 
+                .box-img
+                    display: inline-block;
+                    position: relative;
+                    height: 100%
+                    width: 100%
+                    &:after 
+                        content: attr(data-alt);
+                        position: absolute
+                        bottom: 2rem 
+                        left: 50%
+                        transform: translateX(-50%)
+                        color: #ffffff
+                        font-weight: 400
+                        text-transform: capitalize
+                        color: #ffffff
+                        font-size: 1.8rem
+                        z-index: 9
+                        pointer-events: none
+
+                &:after 
+                    content: ""
+                    position: absolute
+                    top: 0 
+                    left: 0 
+                    width: 100%
+                    height: 100%
+                    background: rgba(38,38,43,.25)
+                    transition: all .3s ease
+                    pointer-events: none
+            .big
+                padding: 0 10px 
+                .image
+                    height: 40rem
+                    width: 100%
+                    position: relative
+                    overflow: hidden
+                    img 
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                @media (max-width: 1025px)
+                    .item 
+                        flex: 0 0 100%
+                        .image
+                            height: auto 
+                            width: 100%
+                figure
+                    position: relative
+                    display: flex
+                    align-items: center
+                    justify-content: center 
+                    position: relative
+                    figcaption
+                        width: 100%
+                        height: 100%
+                        position: absolute
+                        z-index: 2
+                        opacity: 1
+                        display: flex 
+                        justify-content: center
+                        align-items: center
+                        flex-direction: column
+                        img 
+                            max-width: 6rem 
+                            height: auto
+                    &:after
+                        content: ''
+                        display: block
+                        width: calc(100% - 4rem)
+                        height: calc(100% - 4rem)
+                        position: absolute
+                        background: rgba(13,164,74,.9)
+                        z-index: 1
+                        transition: all .3s ease
+                        opacity: 0
+                        pointer-events: none
+
+                    &:hover
+                        figcaption
+                            overflow: hidden
+                            .title 
+                                transform: scale(1)
+                                transition: transform .2s
+                        .image 
+                            .box-img
+                                &:after 
+                                    opacity: 0
+                            &:after 
+                                opacity: 0
+                        &:after
+                            opacity: 1
+                        .button-search
+                            opacity: 1
+                            z-index: 99
+            .small
+                margin-top: 2rem
+                .item
+                    padding: 0 10px
+                    @media (max-width: 1025px)
+                        &:nth-child(1)
+                            margin-bottom: 2rem
+                        
+                    .image
+                        height: 18.5rem
+                        width: auto
+                        overflow: hidden
+                        @media (max-width: 1025px)
+                            width: 100%
+                        img 
+                            height: 100%
+                            width: 100%
+                            object-fit: cover   
+                    figure
+                        position: relative
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        .button-search
+                            position: absolute
+                            top: 10px
+                            right: 10px
+                            width: 60px
+                            height: 60px
+                            background: #ffffff
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            opacity: 0
+                            em 
+                                color: $main-color
+                                font-size: 24px
+                        figcaption
+                            width: 100%
+                            height: 100%
+                            position: absolute
+                            z-index: 2
+                            opacity: 1
+                            display: flex 
+                            justify-content: center
+                            align-items: center
+                            flex-direction: column
+                            img 
+                                max-width: 6rem 
+                                height: auto
+                            .play-button
+                                position: relative
+                                width: 4rem
+                                height: 4rem
+                                img 
+                                    width: 100%
+                        &:after
+                            content: ''
+                            display: block
+                            width: calc(100% - 2rem)
+                            height: calc(100% - 2rem)
+                            position: absolute
+                            background: rgba(13,164,74,.9)
+                            z-index: 1
+                            transition: all .3s ease
+                            opacity: 0
+                        &:hover
+                            figcaption
+                                overflow: hidden
+                                .title 
+                                    transform: scale(1)
+                                    transition: transform .2s
+                            .image 
+                                .box-img
+                                    &:after 
+                                        opacity: 0
+                                &:after 
+                                    opacity: 0
+                            &:after
+                                opacity: 1
+                            .button-search
+                                opacity: 1
+                                z-index: 99
+        .right 
+            .small 
+                margin-top: 0
+            .big
+                margin-top: 2rem
+                @media (max-width: 1025px)
+                    margin-top: 0

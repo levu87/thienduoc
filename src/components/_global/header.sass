@@ -1,0 +1,423 @@
+.header 
+    position: fixed
+    width: 100%
+    background-image: linear-gradient(180deg,#fff 30%,#ffffffe3 70%)
+    z-index: 999
+    top: 0
+    left: 0
+    &.fixed 
+        background-image: linear-gradient(180deg,#fff 30%,#ffffffe3 70%)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 999
+        &:after 
+            margin-top: -100px
+            transition: .15s linear
+    &:after
+        content: url("/Data/Sites/1/media/img/shape2.png")
+        display: block
+        position: absolute  
+        top: calc(100% - 0px)
+        opacity: .899
+        left: 50%
+        z-index: -1
+        transform: translateX(-50%)
+    .nav
+        display: flex 
+        align-items: center 
+        height: 80px
+        
+        &__menu-left
+            .menu 
+                list-style: none 
+                display: flex 
+                &__item 
+                    padding: .7rem .2rem
+
+                    a 
+                        display: block
+                        padding: .7rem 1.2rem
+                    &:not(:first-child)
+                        &:hover,&.active 
+                            a 
+                                color: #ffffff
+                                background: #ea4124
+                                border-radius: 2rem
+                    a
+                        text-decoration: none
+                        font-size: 1.6rem
+                        color: rgb(51, 51, 51)
+                        line-height: 1.25
+                        font-weight: 500
+                    &:hover,&.active 
+                        a
+                            transition: .2s ease
+                            &:first-child
+                                background: #ea4124
+                                color: #fff
+                            
+                    &:first-child
+                        font-size: 0 
+                        a 
+                            position: relative
+                            font-size: 0
+                            width: 3.5rem 
+                            height: 3.5rem 
+                            
+                            display: flex 
+                            align-items: center 
+                            justify-content: center
+                            border-radius: 50% 
+                            color: #333333
+                            &:before 
+                                content: '\e800'
+                                font-family: Linearicons-Free
+                                font-weight: 400
+                                font-size: 2rem
+                                position: absolute 
+                                left: 50%
+                                top: 50%
+                                transform: translate(-50%,-50%)
+                                margin-right: 2rem
+                        + li 
+                            padding-left: 1.2rem
+        &__logo 
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            .logo
+                display: block 
+                img 
+                    max-width: 11rem
+        &__menu-right 
+            display: flex
+            align-items: center
+            margin-left: auto
+            margin-right: 1.2rem
+            .menu 
+                list-style: none 
+                display: flex 
+                &__item 
+                    padding: .7rem .2rem
+                    &:hover,&.active 
+                        a 
+                            transition: .2s ease
+                            color: #ffffff
+                            background: #ea4124
+                            border-radius: 2rem
+                &__link 
+                    display: block
+                    padding: .7rem 1.2rem
+                    text-decoration: none
+                    font-size: 1.6rem
+                    color: rgb(51, 51, 51)
+                    line-height: 1.25
+                    font-family: 'Livvic'
+                    font-weight: 500
+        .search-wrap 
+            .button-search 
+                width: 3.5rem
+                height: 3.5rem 
+                border-radius: 50% 
+                border: 1px solid #666666
+                display: flex 
+                align-content: center
+                justify-content: center
+                position: relative
+                em  
+                    position: absolute
+                    bottom: 50%
+                    right: 50%
+                    transform: translate(50%,50%)
+                    color: #ea4124
+                    font-size: 2rem
+                    &:before
+                        font-weight: 600
+
+                &.active 
+                    em 
+                        bottom: 50%
+                        &:before 
+                            content: '\e870'
+                            font-family: Linearicons-Free
+                            font-weight: 500
+                            display: block
+            .search-box-wrap
+                position: fixed
+                width: 100%
+                background: #ffffff
+                left: 0
+                top: 80px
+                z-index: 97
+                padding: 5rem 0
+                display: flex 
+                justify-content: center
+                opacity: 0 
+                visibility: hidden
+                @media (max-width: 1025px)
+                    padding: 4rem 15px
+                &.active 
+                    opacity: 1 
+                    visibility: visible 
+                    transition: .15s linear
+                    .searchbox
+                        transform: translateY(0)
+                        transition: transform .25s linear
+                .Module.Module-209
+                    width: 50%
+                    @media (max-width: 767.98px)
+                        width: 90%
+                .searchbox
+                    position: relative
+                    transform: translateY(-3rem)
+                    background: #ffffff
+                    border-radius: 2.5rem
+                    width: 100%
+                    input[type="text"]
+                        width: 100% 
+                        padding: .7rem 2rem
+                        border: 1px solid #ea4124
+                        border-radius: 2.5rem
+                    button 
+                        position: absolute 
+                        right: 2rem 
+                        top: 50%
+                        transform: translateY(-50%)
+                        color: #ea4124
+                        outline: none
+                        border: none
+                        background: none
+        .language 
+            margin-left: .5rem
+            width: 3.5rem
+            height: 3.5rem 
+            border-radius: 50% 
+            border: 1px solid $text
+            display: flex 
+            align-content: center
+            justify-content: center
+            position: relative
+            a 
+                position: absolute 
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                font-size: 1.4rem
+                color: rgb(153, 153, 153)
+                line-height: 1.429
+        .hotline 
+            .ModuleContent
+                display: flex 
+                background: #ea4124
+                border-radius: 2.5rem
+                padding: 0.3rem 1.5rem
+                align-items: center
+                margin-left: .5rem
+                .call 
+                    padding-right: 1.5rem
+                    color: #ffffff
+                .number 
+                    display: flex 
+                    flex-direction: column
+                    span:nth-child(1)
+                        font-size: 1.4rem
+                        font-family: "Livvic"
+                        color: rgb(255, 255, 255)
+                        font-weight: bold
+                        line-height: 1.429
+                    span 
+                        color: #ffffff 
+                        font-size: 1.4rem
+                        line-height: 1.4rem
+        .button-search
+            width: 3.5rem
+            height: 3.5rem 
+            border-radius: 50% 
+            border: 1px solid #666666
+            display: none
+            align-content: center
+            justify-content: center
+            position: relative
+            cursor: pointer
+            @media (max-width: 1200px)
+                display: flex
+            em  
+                position: absolute
+                bottom: 50%
+                right: 50%
+                transform: translate(50%,50%)
+                color: #ea4124
+        &__toggle-btn 
+            display: none
+            justify-content: center
+            align-items: center
+            z-index: 1
+            @media (max-width: 1200px)
+                display: block
+            .button
+                height: 2px
+                width: 25px
+                background: #ea4124
+                position: relative
+                transition: all 0ms 300ms
+                &:after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    bottom: 6px
+                    background: #ea4124
+                    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+                &:before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    top: 6px
+                    background: #ea4124
+                    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+            &.active
+                .button
+                    background: transparent
+                    &:before
+                        top: 0
+                        transform: rotate(45deg)
+                        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+                    &:after
+                        bottom: 0
+                        transform: rotate(-45deg)
+                        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+        &__nav-mobile 
+            position: fixed
+            top: 80px
+            left: 0
+            height: calc(100vh - 80px)
+            transform: translateX(-100%)
+            background-color: #ffffff
+            width: 300px
+            z-index: 999
+            transition: transform .2s linear
+            border-top: 1px solid #ea4124
+            &.active 
+                transform: translateX(0)
+    .back-drop 
+        width: 100vw
+        height: calc(100vh - 80px)
+        background: rgba(0,0,0,.5)
+        position: fixed 
+        top: 80px
+        z-index: 96
+        left: 0
+        opacity: 0 
+        visibility: hidden
+        &.active 
+            opacity: 1 
+            visibility: visible
+    @media (max-width: 1200px)
+        &:after 
+            display: none
+        .nav 
+            justify-content: space-between
+            &__menu-left,&__menu-right,.language,.hotline
+                display: none
+            .menu
+            &__logo 
+                position: static 
+                top: unset
+                left: unset
+                transform: unset
+                img 
+                    max-width: 9rem!important
+            &__nav-mobile 
+                display: flex 
+                flex-direction: column
+                padding: 1.5rem
+                &.active 
+                    
+                    .nav__menu-left
+                        display: flex
+                        flex-direction: column
+                        .menu__link:first-child 
+                            display: block
+                            width: 100%
+                            text-align: left
+                    .nav__menu-right 
+                        margin-left: unset
+                        display: flex
+                    .menu 
+                        display: inline-block
+                        width: 100%
+                        list-style: none
+                        &__item 
+                            &:not(:first-child)
+                                margin-bottom: 1.5rem
+                            &:first-child 
+                                a 
+                                    font-size: 1.6rem
+                                    &:before,em
+                                        display: none!important
+                                + li 
+                                    padding-left: 0
+                            &.active,&:hover
+                                a
+                                    background: none
+                                    color: #ea4124
+                        &__link
+                            font-size: 1.6rem
+                            color: #333333
+                    .language 
+                        margin-bottom: 1.5rem
+                        width: 3.5rem
+                        height: 3.5rem 
+                        border-radius: 50% 
+                        border: 1px solid $text
+                        display: flex 
+                        align-content: center
+                        justify-content: center
+                        position: relative
+                        margin-left: 0
+
+                        a 
+                            position: absolute 
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%,-50%)
+                            font-size: 1.4rem
+                            color: rgb(153, 153, 153)
+                            line-height: 1.429
+
+                    .hotline 
+                        display: block
+                        .ModuleContent
+                            display: inline-flex
+                            background: #ea4124
+                            border-radius: 2.5rem
+                            padding: 0.3rem 1.5rem
+                            align-items: center
+                            margin-left: 0
+                            .call 
+                                padding-right: 1.5rem
+                                color: #ffffff
+                            .number 
+                                display: flex 
+                                flex-direction: column
+                                span:nth-child(1)
+                                    font-size: 1.4rem
+                                    font-family: "Livvic"
+                                    color: rgb(255, 255, 255)
+                                    font-weight: bold
+                                    line-height: 1.429
+                                span 
+                                    color: #ffffff 
+                                    font-size: 1.4rem
+                                    line-height: 1.4rem
+
+
+
+
+

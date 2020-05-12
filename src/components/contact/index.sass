@@ -1,0 +1,69 @@
+.contact 
+    padding: 6rem 0 
+    &__wrapper 
+        display: flex 
+        flex-wrap: wrap
+        align-items: stretch 
+        .result-wrapper
+            flex: 0 0 33.33%
+            max-width: 33.33%
+            #list,.list
+                padding: 2rem
+                margin-bottom: 0
+                list-style: none
+                box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1)
+                height: 55rem
+                overflow-y: auto
+                background: #fff
+                > li
+                    padding: 2rem
+                    border-bottom: 1px solid rgba(#999999, 0.5)
+                    cursor: pointer
+                    p
+                        margin: 0
+                        line-height: 2.4rem
+                        color: #666666
+                        display: flex
+                        + p
+                            margin-top: 5px
+                        .lnr
+                            margin-right: 8px
+                            margin-top: 5px
+                        &.name
+                            color: $main-color
+                            line-height: 2rem
+                            text-transform: uppercase
+                            font-weight: bold
+                            font-size: 1.8rem
+
+                    &.active
+                        background: #d8f5df
+                
+                            
+                @include scrollbar(45rem, 4px, #cccccc, $main-color)
+        .map-wrapper 
+            flex: 0 0 66.66%
+            max-width: 66.66%
+            #map,#map_canvas,.map,.map_canvas
+                height: 100%
+                img,iframe
+                    width: 100%
+                    height: 100%
+                .map-inter
+                    height: 100%
+                    width: 100%
+            @media screen and ( max-width: 1025px )
+                #map,#map_canvas,.map,.map_canvas
+                    display: none
+        @media (max-width: 1024.98px)
+            .map-wrapper,.result-wrapper
+                max-width: 100%
+                flex: 0 0 100%
+#map
+    width: 100%
+    padding: 0
+    iframe 
+        width: 100%
+    .fancybox-close-small
+.fancybox-slide--html
+    padding: 15px!important

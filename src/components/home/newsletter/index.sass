@@ -1,0 +1,119 @@
+.home-newsletter
+    &__inner 
+        .content
+            padding-left: 1.5rem
+            padding-right: 1.5rem
+            margin-right: auto
+            margin-left: auto
+            @media (min-width: 768px)
+                max-width: 740px 
+            @media (min-width: 1025px)
+                max-width: 990px 
+        .newsletter 
+            padding: 9rem 0 15rem
+            h3 
+                font-size: 3rem
+                color: rgb(13, 146, 74)
+                font-weight: bold
+                line-height: 1.2
+                margin-bottom: 2rem 
+            p 
+                font-size: 1.6rem 
+                color: #333333
+                margin-bottom: 2rem
+                line-height: 2.4rem
+        .Module-276
+            .ModuleContent 
+                height: 100%
+        .Module-275
+            h3,p
+                color: #ffffff!important
+            .view-btn
+                padding: 1rem 3rem 
+                border: 1px solid #ffffff
+                font-size: 1.4rem
+                color: #ffffff
+                font-weight: bold
+                text-transform: uppercase
+                display: inline-block
+                border-radius: 2rem
+                em 
+                    margin-left: 1.5rem
+                &:hover 
+                    background: #ffffff 
+                    color: $main-color
+                    transition: .2s all ease-in-out
+    @media (min-width: 1200px)
+        &__inner
+            display: flex 
+            flex-wrap: wrap
+            align-items: stretch
+            .Module-276,.Module-275
+                flex: 0 0 50%
+                max-width: 50%
+            .newsletter 
+                display: flex 
+                justify-content: flex-end
+                height: 100%
+                &:nth-child(2)
+                    justify-content: flex-start
+                    .content 
+                        padding-left: 10rem
+                &:nth-child(1)
+                    margin-bottom: 0
+                    .content 
+                        padding-right: 25rem
+                .content 
+                    max-width: 615px
+                    margin: unset
+
+.subscribe-wrap
+    display: none
+    padding: 4rem 2rem!important
+    // background: transparent!important
+    border-radius: 5px
+
+    .subscribe
+    .subscribefrm
+        position: relative
+        display: flex
+        align-items: center
+        border: 1px solid $main-color 
+        width: 350px
+        background: #ffffff
+
+        input 
+            width: calc(100% - 100px)
+            padding: 1rem 2rem 
+            font-size: 1.8rem 
+            outline: none
+            border: none 
+            background: none
+        .subscribebutton 
+            background: $main-color 
+            color: #ffffff 
+            font-weight: bold
+            padding: 1rem 2rem
+            position: absolute 
+            height: 100%
+            right: 0 
+            top: 0
+            border: none 
+            outline: none
+            white-space: nowrap
+    // .fancybox-button svg path 
+    //     fill: #ffffff
+    // .fancybox-button
+    //     background: #000000
+    //     border-radius: 50%
+    //     width: 30px
+    //     height: 30px
+    //     padding: 5px
+    // .fancybox-close-small
+    //     padding: 5px!important
+    .fa-exclamation-triangle
+        position: absolute
+        bottom: -3rem
+        color: red
+            
+

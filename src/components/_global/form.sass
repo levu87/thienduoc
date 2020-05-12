@@ -1,0 +1,139 @@
+.form-section
+    padding-bottom: 6rem
+.form-wrapper 
+    padding: 6rem 7rem
+    background: #f5f5f5
+    @media (max-width: 1024.98px)
+        padding: 2rem
+    p 
+        font-size: 1.8rem 
+        color: #333333
+        line-height: 1.444
+        margin-bottom: 2rem
+        text-align: center
+    .wrap-form
+        input[type='text'], textarea
+            width: 100%
+            padding: 1.2rem 2rem
+            font-size: 1.6rem
+            border-radius: 2.5rem
+            border: none
+            color: #333333
+            caret-color: $main-color
+            &:placeholder
+                color: #999999
+            &:focus
+                outline: none
+                border-color: $main-color
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+        @include placeholder(1.6rem, #999999, nomal)
+        textarea
+            height: 18rem
+        &>div
+            display: flex
+            flex-wrap: wrap
+            margin: 0 -5px
+            .qtext
+                padding: 0 5px
+                flex: 0 0 50%
+                margin-bottom: 20px
+                @media(max-width: 768px)
+                    flex: 0 0 100%
+            .title-form 
+                flex: 0 0 100%!important
+            .qparagraph
+                flex: 0 0 100%
+                padding: 0 5px
+                margin-bottom: 20px
+            span
+                color: red
+                font-size: 13px
+        .frm-captcha
+            display: flex
+            align-items: center
+            flex-direction: row-reverse
+            justify-content: flex-end
+            display: flex
+            
+            .frm-captcha-input
+                width: 23rem
+                @media (max-width: 575.98px)
+                    width: 100%
+                    margin-bottom: 2rem
+                label
+                    display: none
+            .RadCaptcha
+                width: auto!important
+                position: relative
+                padding-left: 5px
+                span
+                    position: absolute
+                    bottom: 100%
+                &>div>div
+                    align-items: center
+                    display: flex
+                    width: 227px
+                    @media (max-width: 480px)
+                        width: 170px
+                        img 
+                            width: 120px!important
+                            height: 40px!important
+            .rcRefreshImage
+                margin: 0 10px
+                font-size: 0
+                &:after
+                    content: url('/Data/Sites/1/media/img/refresh.png')
+                    @media (max-width: 480px)
+                        width: 20px
+                        height: auto
+        .frm-btnwrap
+            justify-content: flex-end
+            @media (max-width: 767.98px)
+                justify-content: flex-start
+                margin-top: 2rem
+            label
+                display: none
+            .frm-btn-reset
+                display: none   
+            .frm-btn
+                position: relative
+                display: inline-block
+                input[type="submit"]
+                    padding: 1rem 7rem 1rem 5rem 
+                    background: #ffffff
+                    border-radius: 2.5rem 
+                    text-transform: uppercase 
+                    color: $main-color
+                    font-weight: bold 
+                    position: relative
+                    border: 1px solid $main-color
+                &:after 
+                    content: "\e87a"
+                    font-family: Linearicons-Free
+                    font-weight: 400
+                    position: absolute 
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: 2rem
+                    color: $main-color
+                &:hover 
+                    input 
+                        background: $main-color 
+                        color: #ffffff 
+                        transition: all .2s ease-in-out
+                    &:after 
+                        color: #ffffff
+            // @media (max-width: 768px)
+            //     display: flex
+            //     justify-content: center
+            //     input[type="submit"]
+            //         width: 140px
+            //         height: 35px
+            //         margin-left: unset
+            //     .frm-btn
+            //         display: flex
+            //         justify-content: center
+        @media(min-width: 768px)
+            .frm-captcha
+                width: 75%
+                float: left

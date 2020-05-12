@@ -1,0 +1,45 @@
+*,
+*:after,
+*:before 
+	margin: 0
+	padding: 0
+	box-sizing: inherit
+html 
+	font-size: 62.5%  //1rem =10px
+	overflow-x: hidden
+	@include respond(tab-land)
+		font-size: 56.25% //1rem=9px
+	@include respond(tab-port)
+		font-size: 50% //1rem=8px
+
+
+body 
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	overflow-x: hidden
+main 
+	// padding-top: 80px
+a 
+	text-decoration: none
+	color: #666666
+img 
+	display: block
+	max-width: 100%
+	height: auto
+button 
+	cursor: pointer
+.hidden 
+	display: none
+.over-hidden
+	overflow: hidden
+input,
+textarea,
+button 
+	outline: none
+	box-shadow: none
+
+.homepage 
+	main 
+		padding-top: 0!important
+
+

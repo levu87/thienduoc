@@ -1,0 +1,456 @@
+.about 
+    .about-nav
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55)
+        overflow-x: auto 
+        white-space: nowrap
+        &.is-fixed
+            position: fixed
+            left: 0
+            top: 80px
+            width: 100% 
+            background: #ffffff
+            z-index: 99
+        @include respond(tab-port)
+            box-shadow: none
+            .about-nav-trigger 
+                position: fixed
+                top: 80px
+                left: 1.5rem
+                padding: 2rem 1rem
+                text-transform: uppercase
+                color: #ffffff
+                font-weight: bold
+                background: rgba(0,0,0,0.9)
+                border-radius: 3px
+                z-index: 11
+                display: flex 
+                align-items: center 
+                justify-content: center
+                .icon
+                    margin-left: auto
+                    position: relative
+                    width: 25px
+                    height: 2px
+                    background: #ffffff
+                    display: block 
+                    transition: all .3s ease-in-out
+                    &:before 
+                        content: ''
+                        position: absolute
+                        width: 25px
+                        height: 2px
+                        background: #ffffff
+                        top: 6px
+                        right: 0
+                        transition: all .3s ease-in-out
+                    &:after
+                        content: ''
+                        position: absolute
+                        width: 25px
+                        height: 2px
+                        bottom: 6px
+                        right: 0
+                        background: #ffffff
+                        transition: all .3s ease-in-out
+                &.menu-is-open
+                    .icon
+                        &:before
+                            width: 15px
+                            -webkit-transform: translateX(-11px) rotate(45deg)
+                            -ms-transform: translateX(-11px) rotate(45deg)
+                            -o-transform: translateX(-11px) rotate(45deg)
+                            transform: translateX(-11px) rotate(45deg)
+                        &:after
+                            width: 15px
+                            -webkit-transform: translateX(-11px) rotate(-45deg)
+                            -ms-transform: translateX(-11px) rotate(-45deg)
+                            -o-transform: translateX(-11px) rotate(-45deg)
+                            transform: translateX(-11px) rotate(-45deg)
+                        
+            &__list 
+                background: rgba(0,0,0,0.9)
+                position: fixed
+                top: 80px
+                left: 1.5rem
+                text-align: center
+                padding: 0
+                border-bottom:  0
+                transform: scale(0)
+                visibility: hidden
+                backface-visibility: hidden
+                transform-origin: top left
+                transition: all 0.3s
+                z-index: 10
+                width: 90%
+                max-width: 400px
+                &.is-visible 
+                    display: block
+                    visibility: visible 
+                    backface-visibility: visible 
+                    transform: scale(1)
+                    padding: 2rem 0
+                    li 
+                        &:after 
+                            display: none
+                        a 
+                            color: #ffffff
+                            display: block
+                            &:hover,&.active 
+                                color: $main-color
+                                &:after 
+                                    display: none
+        &__list
+            text-align: center
+            list-style: none
+            display: flex
+            justify-content: center 
+            @media (max-width: 767.98px)
+                justify-content: flex-start
+            li:not(:last-child)
+                margin-right: 3rem
+            li
+                a
+                    padding: 1rem 0
+                    position: relative
+                    &:after 
+                        position: absolute 
+                        content: ' '
+                        width: 0
+                        height: 2px
+                        background: #893734 
+                        left: 0 
+                        bottom: 0
+                    &:hover,&.active 
+                        color: #893734
+                        &:after 
+                            width: 100%
+                            transition: .25s linear
+                        
+                
+            .about-nav__link
+                display: inline-block
+                color: #333333
+    .main-content
+        .section 
+            h4 
+                font-size: 2rem
+                color: rgb(137, 55, 52)
+                font-weight: bold
+                text-transform: uppercase
+                line-height: 1.2
+                margin-bottom: 2.5rem
+            p 
+                font-size: 1.8rem
+                font-family: "Livvic"
+                color: rgb(51, 51, 51)
+                line-height: 1.556
+                &:not(:last-child)
+                    margin-bottom: 3.5rem
+            .nav-sub 
+                list-style: none 
+                display: flex
+                justify-content: center
+                margin-bottom: 3.5rem
+                overflow-x: auto
+                @media (max-width: 575.98px)
+                    justify-content: flex-start
+                li 
+                    &:not(:last-child)
+                        margin-right: 3rem
+                    a 
+                        padding: .7rem 3rem 
+                        border-radius: 2.5rem
+                        border: 1px solid $main-color 
+                        color: $main-color 
+                        display: block
+                        font-size: 1.8rem 
+                        font-weight: bold
+                        white-space: nowrap
+                    &:hover,&.active 
+                        a 
+                            background: $main-color 
+                            color: #ffffff 
+                            transition: all .25s all ease-in-out
+            .tab-content,.noidung
+                &.active 
+                    display: block!important
+            &__1 
+                .box-content:nth-child(1)
+                    padding: 8rem 0
+                    h2 
+                        text-align: left
+                .box-content:nth-child(2)
+                    padding: 6rem 0
+                    .viewmore-btn
+                        text-align: center 
+                        margin-top: 2.5rem
+                        a 
+                            padding: .7rem 3rem
+                            display: inline-block
+                            border-radius: 2.5rem 
+                            border: 1px solid $main-color 
+                            color: $main-color 
+                            font-weight: bold 
+                            text-transform: uppercase
+                        &:hover 
+                            a 
+                                background: $main-color 
+                                color: #ffffff 
+                                transition: all .25s ease-in-out
+
+                    .full-content 
+                        margin-bottom: 3.5rem
+                        .text
+                            padding: 2.5rem 
+                        .box-img 
+                            img 
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                    .list-text 
+                        list-style-type: none 
+                        li 
+                            padding-left: 1.5rem
+                            font-size: 1.8rem
+                            font-family: "Livvic"
+                            color: rgb(51, 51, 51)
+                            line-height: 1.556
+                            position: relative
+                            &:not(:last-child)
+                                margin-bottom: 1.5rem
+                            &:before 
+                                content: ""
+                                position: absolute 
+                                left: 0 
+                                top: 50%
+                                transform: translateY(-50%)
+                                height: 7px 
+                                width: 7px 
+                                border-radius: 50%
+                                background: rgb(137, 55, 52)
+                        
+                .content 
+                    padding-right: 50%
+                    @media (max-width: 1024.98px)
+                        padding-right: 0
+                .name 
+                    font-size: 1.6rem 
+                    line-height: 1.2 
+                    color: #666666 
+                    text-transform: uppercase 
+                    font-weight: bold
+                    margin-bottom: 2.5rem
+                .quote 
+                    font-size: 30px
+                    color: rgb(13, 146, 74)
+                    line-height: 1.2
+                    margin-bottom: 2rem
+            &__2
+                .about-history 
+                    &__content 
+                        position: relative
+                        span 
+                            color: $main-color
+                        .layer-1 
+                            position: absolute 
+                            top: 0 
+                            left: 0 
+                            right: 0 
+                            bottom: 0 
+                            min-height: 100%
+                            z-index: -1
+                            display: flex 
+                            flex-wrap: wrap
+                            &__empty 
+                                width: 50%
+                                flex: 0 0 50%
+                            &__wf-image 
+                                flex: 0 0 50%
+                                width: 50%
+                                position: relative
+                                img 
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
+                                .section-divider 
+                                    position: absolute 
+                                    height: 100%
+                                    width: auto 
+                                    left: -1px
+                                    top: 0
+                        .layer-2 
+                            display: flex 
+                            flex-wrap: wrap 
+                            @include mr
+                            &__empty 
+                                width: 50%
+                                flex: 0 0 50%
+                                @include pd
+                            &__content
+                                flex: 0 0 50%
+                                width: 50%
+                                padding-top: 7rem 
+                                padding-bottom: 12rem
+                                @include pd
+                                h2 
+                                    text-align: left
+                        &:nth-child(1)
+                            margin-bottom: 1rem
+                            .layer-2
+                                &__content 
+                                    padding-right: 8.33%
+                        &:nth-child(2)
+                            .layer-1 
+                                position: absolute 
+                                top: 0 
+                                left: 0 
+                                right: 0 
+                                bottom: 0 
+                                min-height: 100%
+                                z-index: -1
+                                display: flex 
+                                flex-wrap: wrap
+                                &__empty 
+                                    width: 50%
+                                    flex: 0 0 50%
+                                &__wf-image-rotate 
+                                    flex: 0 0 50%
+                                    width: 50%
+                                    position: relative
+                                    img 
+                                        width: 100%
+                                        height: 100%
+                                        object-fit: cover
+                                    .section-divider 
+                                        position: absolute 
+                                        height: 100%
+                                        width: auto 
+                                        right: -1px
+                                        top: 0
+                                        transform: rotate(180deg)
+                            .layer-2
+                                &__content:nth-child(1)
+                                    padding-right: 8.33%
+                                    h2  
+                                        color: #ffffff
+                                &__content:nth-child(2)
+                                    padding-right: 8.33%
+                                    padding-left: 8.33%
+                    @media (max-width: 991.98px)
+                        &__content 
+                            &:nth-child(1)
+                                display: flex 
+                                flex-direction: column-reverse
+                                .layer-1 
+                                    position: unset
+                                    flex-direction: column
+                                    .section-divider 
+                                        display: none
+                                    &__wf-image,&__empty 
+                                        flex: 0 0 100%
+                                        width: 100%
+                                        height: 100%
+                                    &__empty 
+                                        display: none
+                                .layer-2
+                                    flex-direction: column
+                                    &__content,&__empty 
+                                        flex: 0 0 100%
+                                        width: 100%
+                                    &__content 
+                                        padding: 6rem 1.5rem
+                            &:nth-child(2)
+                                display: flex 
+                                flex-direction: column-reverse
+                                .layer-1 
+                                    margin-top: 6rem
+                                    position: unset
+                                    flex-direction: column
+                                    .section-divider 
+                                        display: none
+                                    &__wf-image-rotate,&__empty 
+                                        flex: 0 0 100%
+                                        width: 100%
+                                        height: 100%
+                                    &__empty 
+                                        display: none
+                                .layer-2 
+                                    flex-direction: column-reverse
+                                    &__content 
+                                        width: 100%
+                                        flex:  0 0 100%
+                                        &:nth-child(1)
+                                            display: none
+                                        &:nth-child(2)
+                                            padding: 6rem 1.5rem 0
+            &__3 
+                padding: 6rem 0
+                .box-img 
+                    height: 60rem 
+                    width: auto
+                    img 
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .box-content 
+                    margin: 3rem 0 4rem 2rem
+                    .content 
+                        max-height: 53rem
+                        overflow-y: auto
+                        padding-right: 1.5rem
+                        &::-webkit-scrollbar
+                            width: 4px
+                        &::-webkit-scrollbar-track
+                            background: #dfdfdf
+                        &::-webkit-scrollbar-thumb
+                            background: $main-color
+            &__4 
+                background: #d8f5df
+                padding: 6rem 0
+                h2 
+                    margin-bottom: 8rem
+                .swiper-container 
+                    position: relative
+                    .swiper-slide 
+                        .box-img 
+                            display: flex 
+                            justify-content: center
+                    .swiper-nav
+                        position: absolute 
+                        top: 50% 
+                        transform: translate(-50%,-50%)
+                        z-index: 99
+                        left: 50%
+                        display: flex 
+                        width: 100%
+                        .button-next 
+                            margin-left: auto   
+                        .button-prev 
+                        .button-next,.button-prev 
+                            width: 4rem 
+                            height: 4rem 
+                            display: flex 
+                            justify-content: center 
+                            align-items: center 
+                            color: #333333 
+                            border: 1px solid #d7d7d7 
+                            background: #ffffff
+                            font-size: 1.8rem
+                            outline: none
+
+
+                    .wrapper
+                        display: flex 
+                        flex-flow: wrap
+                        justify-content: space-between
+                        .box-img
+                            width: calc(41.66% - 1.5rem)
+                            position: relative
+                        .box-content
+                            width: calc(58.33% - 1.5rem)
+                            @media (max-width: 767.98px)
+                                margin-top: 3rem
+                            .content 
+                                @include scrollbar(33rem, .3rem, $main-color ,#fff)
+
+

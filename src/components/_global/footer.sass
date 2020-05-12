@@ -1,0 +1,159 @@
+.footer 
+    padding: 8rem 0 5rem
+    background: #f7f6f0
+    border-bottom: 5px solid rgb(137, 55, 52)
+    border-top: 7px solid #fdfdfd
+    position: relative
+    &:after
+        content: url("/Data/Sites/1/media/img/shape.png")
+        display: block
+        position: absolute  
+        top: 0
+        left: 50%
+        z-index: 98
+        transform: translateX(-50%)
+    .main-footer 
+        display: flex 
+        flex-wrap: wrap
+        margin: 0 -15px
+        padding-bottom: 6rem
+        &__info 
+            flex: 0 0 50% 
+            max-width: 50%
+            padding: 0 15px
+            .ModuleContent
+                display: flex 
+                flex-wrap: wrap
+        &__content 
+            &--2,&--3
+                flex: 0 0 50% 
+                max-width: 50%
+                margin-top: 2.5rem
+            h3 
+                font-size: 1.8rem
+                color: rgb(137, 55, 52)
+                font-weight: bold
+                text-transform: uppercase
+                line-height: 1.2
+                margin-bottom: 2.5rem
+            p 
+                font-size: 1.4rem
+                color: rgb(52, 52, 52)
+                line-height: 1.429
+            strong 
+                line-height: 1.429
+        &__menu-wrapper
+            display: flex 
+            flex-wrap: wrap 
+            flex: 0 0 50%
+            max-width: 50%
+            margin: 0 -15px
+            padding: 0 15px
+        &__menu 
+            padding: 0 15px
+            flex: 0 0 50%
+            max-width: 50%
+            h3 
+                font-size: 1.8rem
+                color: rgb(137, 55, 52)
+                font-weight: bold
+                text-transform: uppercase
+                line-height: 1.2
+                margin-bottom: 2.5rem
+        &__menu-list 
+            list-style: none 
+        &__menu-item 
+            a
+                font-size: 1.4rem
+                color: rgb(51, 51, 51)
+                line-height: 2
+                position: relative
+                padding-left: 1.5rem
+                &:after 
+                    content: '+'
+                    font-size: 1.4rem 
+                    color: rgb(51, 51, 51)
+                    position: absolute 
+                    left: 0 
+                    top: -6px
+            &:hover,&.active
+                a 
+                    color: rgb(137, 55, 52) 
+                    transition: .25s linear
+                    &:after 
+                        color: rgb(137, 55, 52) 
+        @media (max-width: 767.98px)
+            &__info,&__menu-wrapper 
+                flex: 0 0 100%
+                max-width: 100%
+            &__info 
+                margin-bottom: 2rem
+            &__content 
+                margin-bottom: 1.5rem
+                &--2,&--3 
+                    flex: 0 0 100%
+                    max-width: 100%
+    .social-icon 
+        list-style: none 
+        text-align: center
+        padding-bottom: 1rem
+        li
+            margin: 0 1rem 1rem 0
+            display: inline-block
+            a
+                width: 4rem 
+                height: 4rem 
+                display: flex
+                align-items: center 
+                justify-content: center
+                border: 1px solid rgb(137, 55, 52)
+                color: #5b6368
+                border-radius: 50%
+                font-size: 1.6rem
+                em  
+                    color: rgb(137, 55, 52)
+    .copyright 
+        ul 
+            text-align: center
+            list-style: 
+        li 
+            display: inline-block
+            padding-left: 1rem
+            position: relative
+            &:after 
+                position: absolute 
+                left: 0 
+                top: 50%
+                transform: translateY(-50%)
+                content: ''
+                width: .5rem 
+                height: .5rem 
+                border-radius: 50% 
+                background: #666666
+            &:not(:first-child)
+                margin-left: 1rem
+        a
+            font-size: 1.2rem
+            color: rgba(51, 51, 51, 0.749)
+            line-height: 1.5
+            text-align: center
+        p 
+            font-size: 1.2rem
+            color: rgba(51, 51, 51, 0.502)
+            line-height: 1.5
+            text-align: center
+            a 
+                color: rgba(51, 51, 51, 0.502)
+    #back-to-top 
+        position: absolute 
+        top: 6px
+        left: 50%
+        transform: translate(-50%)
+        z-index: 99
+        em 
+            font-size: 2.2rem 
+            color: rgb(137, 55, 52)
+
+
+
+

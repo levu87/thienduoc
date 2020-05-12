@@ -1,0 +1,498 @@
+.product-detail
+    padding-top: 6rem
+    &__inner 
+        display: flex 
+        @include mr
+    &__slider 
+        flex: 0 0 50%
+        max-width: 50%
+        display: flex
+        position: relative
+        @include pd
+        .gallery-top  
+            height: 460px 
+            flex-basis: 0 
+            flex-grow: 1 
+            max-width: 100%
+            .swiper-slide 
+                background: #f8f8f8
+                .img 
+                    display: flex 
+                    align-items: center 
+                    justify-content: center
+                    height: 100%
+                    img
+                        width: 100%
+                        object-fit: scale-down
+        .thumbnail-wrap
+            margin-right: 2rem
+            width: 120px
+            flex: 0 0 120px
+            position: relative
+            height: 460px
+            display: flex 
+            align-items: center
+
+        .gallery-thumbs 
+            height: 400px!important
+            .swiper-wrapper 
+            .swiper-slide-thumb-active
+                border: 1px solid $main-color
+            .swiper-slide 
+                background: #f8f8f8
+                .img 
+                    padding: 1.5rem
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: scale-down
+        .product-button-down
+            background: #ffffff
+            bottom: 0rem
+        .product-button-up
+            top: 0rem
+        .product-button-up,.product-button-down
+            position: absolute 
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 99
+            outline: none
+            font-size: 2.4rem
+            width: 4rem 
+            height: 4rem 
+            display: flex 
+            justify-content: center 
+            align-items: center
+            background: #ffffff
+            border: 1px solid #d7d7d7
+            color: #4e4e4e
+    @include respond(tab-land)
+        &__inner
+            flex-wrap: wrap
+        &__slider
+            flex: 0 0 100%
+            max-width: 100%
+            margin-bottom: 3rem
+    &__info 
+        padding: 0 1.5rem 0 5rem
+        @media (max-width: 1024.98px)
+            padding: 0 1.5rem
+        .title 
+            font-size: 3rem 
+            color: $main-color
+            text-transform: capitalize
+            border-bottom: 1px solid #d7d7d7
+            padding-bottom: 2rem
+        .brief-content 
+            p  
+                padding: 2rem 0        
+                font-size: 1.8rem
+                color: rgb(51, 51, 51)
+                line-height: 1.556
+                display: block
+                border-bottom: 1px solid #d7d7d7
+            table 
+                tr 
+                    td 
+                        border-bottom: 1px solid #d7d7d7
+                        font-size: 1.8rem
+                        color: rgb(51, 51, 51)
+                        line-height: 1.556
+                        padding: 2rem 0
+                        vertical-align: baseline
+                    td:first-child
+                        width: 25% 
+                        font-weight: bold
+        .social-icon 
+            padding-top: 2rem
+            display: flex 
+            .like 
+                margin-right: 1rem
+            .like,.share 
+                border-radius: .3rem
+                font-size: 1.1rem
+                height: 2rem
+                padding: 0 .6rem
+                background: #1877f2
+                display: inline-block
+                color: #ffffff
+                display: flex 
+                justify-content: center 
+                align-items: center
+    &__information
+        padding: 8rem 0
+        display: flex 
+        flex-wrap: wrap
+        @include mr
+        .info-wrapper 
+            flex: 0 0 66.66% 
+            max-width: 66.66%
+            @include pd
+            @media (max-width: 1024.98px)
+                flex: 0 0 100%
+                max-width: 100%
+        .contain 
+            border-bottom: 2px solid #d7d7d7
+            .tab-wrapper 
+                ul 
+                    list-style: none 
+                    margin-bottom: 2.5rem
+                    border-bottom: 1px solid #d7d7d7
+                    display: flex
+                    li 
+                        padding: 1rem 2rem 
+                        border: 1px solid #d7d7d7
+                        background: #f7f6f0
+                        display: inline-block
+                        text-align: center
+                        font: normal 1.6rem Arial
+                        border-bottom: none
+                        cursor: pointer
+                        white-space: nowrap
+                        &:before
+                            display: block
+                            content: attr(title)
+                            font-weight: bold
+                            height: 0
+                            overflow: hidden
+                            visibility: hidden
+                        &.current,&:hover
+                            color: #ffffff!important
+                            background: #893734 
+                            transition: .2s ease
+                            border: 1px solid #893734 
+                            font-weight: bold
+                            border-bottom: none!important
+                        &:not(:last-child)
+                            border-right: none
+                        a 
+                            font-size: 1.6rem 
+                            color: #666666  
+                            display: block
+                        &.active,&:hover
+                            background: #893734 
+                            transition: .2s ease
+                            border: 1px solid #893734 
+                            color: #ffffff
+                            &:not(:last-child)
+                                border-right: none!important
+                            a 
+                                color: #ffffff
+                                font-weight: bold
+            .noi-dung
+                display: none
+                &.current 
+                    display: block
+                p        
+                    font-size: 1.8rem
+                    color: rgb(51, 51, 51)
+                    line-height: 1.556
+                    margin-bottom: 2.5rem
+                table 
+                    thead 
+                        background: #d7d7d7
+                        th 
+                            padding: 1.5rem 2rem
+                    tbody 
+                        tr 
+                            display: none
+                            td 
+                                padding: 1.5rem 2rem
+                                font-size: 1.6rem
+                                line-height: 2.4rem
+                            &:nth-child(even)
+                                background: #f5f5f5
+            .viewmore-btn
+                text-align: center
+                margin-bottom: 3rem
+                .main-btn 
+                    border: 1px solid $main-color
+                    color: $main-color
+                    margin: 0
+                    text-align: center
+                    &:hover 
+                        background: $main-color 
+                        color: #ffffff
+                        cursor: pointer
+        .faq-accordion 
+            .main-title 
+                text-align: left 
+                margin-top: 4rem
+            .accordions 
+                list-style: none
+                .accordion-item 
+                    padding: 1.5rem 2rem
+                    background: #f3f3f3
+                    margin-bottom: .8rem
+                    &.active
+                        background: #f7f6f0
+                    .accordion-title 
+                        color: #333333 
+                        line-height: 1.556
+                        font-size: 1.8rem
+                        position: relative
+                        display: flex
+                        .number
+                            position: relative
+                            padding-right: 2rem
+                            padding-left: 1rem
+                            &:before 
+                                content: attr(title)
+                                position: absolute 
+                                top: 0
+                                left: 0rem
+                        .icon
+                            position: relative
+                            padding-left: 4rem
+                            margin-left: auto
+                            &:after
+                                position: absolute
+                                top: 0
+                                right: 0
+                                z-index: 5
+                                pointer-events: none
+                                color: #999
+                                font-family: Linearicons-Free
+                                font-size: 1.8rem
+                                content: "\e874"
+                        &.active
+                            color: #893734
+                            background: #f7f6f0
+                            padding-bottom: 2rem
+                            &:after  
+                                display: block
+                            .icon 
+                                &:after
+                                    content: "\e873"
+                    .accordion-content 
+                        margin: 1.5rem 3rem 0
+                        padding: 2rem 0
+                        border-top: 1px solid #893734
+                        display: none 
+                        p 
+                            font-size: 1.8rem
+                            color: rgb(51, 51, 51)
+                            line-height: 1.556
+                        &.active 
+                            display: block
+        .form-wrap-dtl
+            flex: 0 0 33.33%
+            max-width: 33.33%
+            @include pd
+            @media (max-width: 1024.98px)
+                flex: 0 0 100%
+                max-width: 100%
+            .form-inner
+                background-image: url("/Data/Sites/1/media/img/pro-bg-2.png")
+                background-repeat: no-repeat
+                background-size: cover
+                margin-top: 2.5rem
+                padding: 2.5rem
+                &__img 
+                    img
+                        width: 100%
+                .title 
+                    font-size: 2.4rem 
+                    color: $main-color
+                    margin-bottom: 2.5rem
+                    font-weight: bold
+                .wrap-form
+                    input[type="text"],textarea 
+                        width: 100%
+                        background: #ffffff 
+                        border-radius: 2.5rem
+                        border: 1px solid #e7e7e7
+                        padding: 1rem 2rem
+                    textarea 
+                        height: 9.5rem
+                    .form-group 
+                        margin-bottom: 2rem
+                    .frm-btn-reset
+                        display: none
+                    .fa-exclamation-triangle
+                        color: red
+                        font-size: 1.4rem
+                    .frm-btn
+                        position: relative
+                        display: inline-block
+                        input[type="submit"]
+                            padding: .7rem 5rem .7rem 3rem 
+                            background: #ffffff
+                            border-radius: 2.5rem 
+                            text-transform: uppercase 
+                            color: $main-color
+                            font-weight: bold 
+                            position: relative
+                            border: 1px solid $main-color
+                        &:after 
+                            content: "\e87a"
+                            font-family: Linearicons-Free
+                            font-weight: 400
+                            position: absolute 
+                            top: 50%
+                            transform: translateY(-50%)
+                            right: 2rem
+                            color: $main-color
+                        &:hover 
+                            input 
+                                background: $main-color 
+                                color: #ffffff 
+                                transition: all .2s ease-in-out
+                            &:after 
+                                color: #ffffff
+    .other-product 
+        background: #d8f5df
+        padding: 8rem 0
+        h2 
+            margin-bottom: 4rem
+        &__slider 
+            position: relative
+            .swiper-nav
+                position: absolute 
+                top: 50% 
+                transform: translate(-50%,-50%)
+                left: 50%
+                display: flex 
+                width: 100%
+                .button-next 
+                    margin-left: auto
+                    transform: translateX(6rem)
+                .button-prev 
+                    transform: translateX(-6rem)
+                .button-next,.button-prev 
+                    width: 4rem 
+                    height: 4rem 
+                    display: flex 
+                    justify-content: center 
+                    align-items: center 
+                    color: #333333 
+                    border: 1px solid #d7d7d7 
+                    background: #ffffff
+                    font-size: 1.8rem
+                    outline: none
+                @media (max-width: 767.98px)
+                    top: calc(100% + 2rem)
+                    transform: translate(-50%,0%)
+                    width: 80px
+                    .button-next,.button-prev 
+                        transform: unset
+                        
+        &__item
+            position: relative
+            background: #ffffff 
+            border-radius: 2rem
+            height: 32rem 
+            z-index: 99
+            // &:before
+            //     content: ''
+            //     width: 100%
+            //     height: 100%
+            //     border-radius: 2rem 
+            //     position: absolute
+            //     top: 0 
+            //     left: 0 
+            //     background: rgba(13,146,74,.9)
+            //     visibility: hidden
+            //     opacity: 0
+            //     pointer-events: none
+            &:after 
+                position: absolute
+                content: ''
+                background: $main-color 
+                height: 2px 
+                width: 4rem 
+                left: 50%
+                transform: translateX(-50%)
+                bottom: 0
+            .box-img 
+                height: 100%
+                width: 100%
+                display: block
+                img 
+                    width: 100%
+                    height: 100%
+                    object-fit: scale-down
+            .title 
+                position: absolute
+                color: #333333 
+                font-size: 1.8rem
+                text-align: center
+                padding-bottom: 2.5rem 
+                display: block
+                bottom: 0 
+                width: 100%
+                left: 0
+            .overlay
+                top: 0
+                left: 0
+                position: absolute 
+                width: 100%
+                height: 100% 
+                display: flex 
+                justify-content: center 
+                align-items: center
+                flex-direction: column
+                background: rgba(13,146,74,.9)
+                visibility: hidden
+                opacity: 0
+                pointer-events: none
+                border-radius: 2rem
+                .title-ol
+                    margin-bottom: 1.5rem
+                    display: block
+                    font-size: 1.8rem
+                    text-align: center
+                    color: #ffffff
+                    text-decoration: underline 
+                .main-btn 
+                    border-color: #ffffff
+                    color: #ffffff 
+                    &:hover 
+                        background: #fff 
+                        color: $main-color 
+                        transition: all .25s ease
+            &:hover 
+                .overlay
+                    transition: all .3s ease
+                    visibility: visible 
+                    opacity: 1
+                    pointer-events: all
+                &:before 
+                    visibility: visible 
+                    opacity: 1 
+                    pointer-events: all
+                .title 
+                    display: none
+                &:after 
+                    display: none
+        
+.product-detail-page
+    .banner-child
+        display: none
+    .breadcrumb-wrapper
+        margin-top: 8rem
+        background: #f5f5f5
+        li 
+            a 
+                color: #999999 
+                &:before 
+                    color: #999999!important
+            &.active 
+                color: $main-color
+            &:before 
+                color: #999999!important
+    .modulepager 
+        display: none!important
+    .header
+        &:after
+            display: none
+    main
+        padding-top: 0
+    @media (max-width: 1024.98px)
+        main
+            padding-top: 80px
+
+
+
+
+
